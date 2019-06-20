@@ -1,0 +1,50 @@
+﻿@model WebProject_ITTaling.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Review</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Lecture.lectureTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lecture.lectureTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.reviewContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reviewContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.reviewGrade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reviewGrade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.memberID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.memberID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.reviewID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

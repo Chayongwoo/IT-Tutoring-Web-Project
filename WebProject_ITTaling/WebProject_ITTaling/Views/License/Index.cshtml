@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebProject_ITTaling.Models.License>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Member.memberName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.licenseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.licenseNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.licenseAgency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.licenseAcqDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Member.memberName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.licenseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.licenseNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.licenseAgency)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.licenseAcqDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.licenseID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.licenseID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.licenseID })
+        </td>
+    </tr>
+}
+
+</table>

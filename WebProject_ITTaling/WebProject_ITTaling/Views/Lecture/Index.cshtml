@@ -1,0 +1,111 @@
+﻿@model IEnumerable<WebProject_ITTaling.Models.Lecture>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Member.memberName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lectureTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lectureLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lectureImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tutorIntroduce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lectureIntroduce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lecturePeople)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lecturePlan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lectureCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lecturePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lectureMaxperson)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lectureApplyDeadline)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lectureLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lecturePlace)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Member.memberName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lectureTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lectureLanguage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lectureImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tutorIntroduce)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lectureIntroduce)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lecturePeople)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lecturePlan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lectureCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lecturePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lectureMaxperson)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lectureApplyDeadline)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lectureLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lecturePlace)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.lectureID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.lectureID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.lectureID })
+        </td>
+    </tr>
+}
+
+</table>

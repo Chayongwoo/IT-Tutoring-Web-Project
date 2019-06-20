@@ -1,0 +1,130 @@
+﻿@model WebProject_ITTaling.Models.Lecture
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Lecture</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.memberName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Member.memberName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lectureTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lectureTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lectureLanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lectureLanguage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lectureImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lectureImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tutorIntroduce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tutorIntroduce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lectureIntroduce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lectureIntroduce)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lecturePeople)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lecturePeople)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lecturePlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lecturePlan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lectureCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lectureCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lecturePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lecturePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lectureMaxperson)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lectureMaxperson)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lectureApplyDeadline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lectureApplyDeadline)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lectureLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lectureLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lecturePlace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lecturePlace)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.lectureID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

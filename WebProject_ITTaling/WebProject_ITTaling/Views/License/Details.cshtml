@@ -1,0 +1,58 @@
+﻿@model WebProject_ITTaling.Models.License
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>License</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.memberName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Member.memberName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.licenseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.licenseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.licenseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.licenseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.licenseAgency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.licenseAgency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.licenseAcqDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.licenseAcqDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.licenseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

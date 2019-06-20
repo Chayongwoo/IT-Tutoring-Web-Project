@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebProject_ITTaling.Models.Member>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.memberName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.memberEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.memberPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.memberType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.memberPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tutorImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tutorPortfolio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tutorGit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.memberName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.memberEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.memberPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.memberType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.memberPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tutorImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tutorPortfolio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tutorGit)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.memberID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.memberID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.memberID })
+        </td>
+    </tr>
+}
+
+</table>

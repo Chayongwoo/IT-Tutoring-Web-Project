@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebProject_ITTaling.Models.Schedule>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Lecture.lectureTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dayofweek)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.scheduleTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lecture.lectureTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dayofweek)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.scheduleTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.scheduleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.scheduleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.scheduleID })
+        </td>
+    </tr>
+}
+
+</table>

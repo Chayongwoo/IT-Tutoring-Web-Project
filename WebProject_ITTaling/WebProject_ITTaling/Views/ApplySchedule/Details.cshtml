@@ -1,0 +1,42 @@
+﻿@model WebProject_ITTaling.Models.ApplySchedule
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ApplySchedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Application.applicationLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Application.applicationLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.applyDayofweek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.applyDayofweek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.applyScheduleTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.applyScheduleTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.applyScheduleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
